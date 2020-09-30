@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace TranslationLoader\Laravel\Reader;
 
 use TranslationLoader\Reader\TranslationReaderInterface;

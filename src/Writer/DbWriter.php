@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace TranslationLoader\Laravel\Writer;
 
 use TranslationLoader\Data\DataRow;
 use TranslationLoader\Writer\TranslationWriterInterface;
 
 /**
- * Используется для записи переводов в базу
+ * Used for writing laravel translations in database
  * @package TranslationLoader\Laravel\Writer
  */
 class DbWriter implements TranslationWriterInterface
@@ -48,7 +50,7 @@ class DbWriter implements TranslationWriterInterface
     }
 
     /**
-     * Подготовить фразу для записи в базу. Если это литерал, то от него отрезается название группы, и возвращается сам литерал
+     * Prepare string for writing to the database. If literal, group will be stripped, and literal will be returned without it
      * @param string $value
      * @return string
      */
@@ -61,7 +63,7 @@ class DbWriter implements TranslationWriterInterface
     }
 
     /**
-     * Парсит название группы
+     * Parse group name
      * @param string $value
      * @return string
      */
@@ -74,7 +76,7 @@ class DbWriter implements TranslationWriterInterface
     }
 
     /**
-     * Проверяет, является ли строка литералом
+     * Check string is literal, or not
      * @param string $value
      * @return bool
      */
